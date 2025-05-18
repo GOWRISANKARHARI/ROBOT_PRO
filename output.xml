@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.14.0a7 on win32)" generated="2025-05-16T17:13:22.329212" rpa="false" schemaversion="5">
+<suite id="s1" name="test Loginwithresource" source="C:\pythonselenium\Robot\test_Loginwithresource.robot">
+<test id="s1-t1" name="Validate Unsucessfull Login" line="11">
+<kw name="Open the Browser with URL" owner="resource">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-16T17:13:22.677051" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-16T17:13:22.676897" elapsed="1.422149"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-16T17:13:24.099541" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-16T17:13:24.099317" elapsed="3.912091"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-16T17:13:28.011740" elapsed="0.035413"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-16T17:13:28.047394" elapsed="0.001996"/>
+</kw>
+<status status="PASS" start="2025-05-16T17:13:22.676298" elapsed="5.373265"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-16T17:13:28.051465" level="INFO">Typing text '1234' into text field 'css:input[name=username]'.</msg>
+<arg>css:input[name=username]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-16T17:13:28.050879" elapsed="0.451386"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-16T17:13:28.502795" level="INFO">Typing text '45678' into text field 'css:input[name=password]'.</msg>
+<arg>css:input[name=password]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-16T17:13:28.502492" elapsed="0.095716"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-16T17:13:28.598727" level="INFO">Clicking button 'css:.orangehrm-login-button'.</msg>
+<arg>css:.orangehrm-login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-16T17:13:28.598465" elapsed="0.098894"/>
+</kw>
+<arg>${invalid_username}</arg>
+<arg>${invalid_password}</arg>
+<status status="PASS" start="2025-05-16T17:13:28.050182" elapsed="0.647332"/>
+</kw>
+<kw name="verify the error message">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-16T17:13:28.698402" level="INFO">Verifying element 'css:.oxd-alert-content--error' contains exact text 'Invalid credentials'.</msg>
+<arg>${login_error_message}</arg>
+<arg>Invalid credentials</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-16T17:13:28.698162" elapsed="1.233483"/>
+</kw>
+<status status="PASS" start="2025-05-16T17:13:28.697858" elapsed="1.233946"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-16T17:13:29.932235" elapsed="2.221570"/>
+</kw>
+<tag>smoke regression</tag>
+<status status="PASS" start="2025-05-16T17:13:22.675409" elapsed="9.478941"/>
+</test>
+<test id="s1-t2" name="Validate Sucessfull Login" line="18">
+<kw name="Open the Browser with URL" owner="resource">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-16T17:13:32.156597" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-16T17:13:32.156452" elapsed="1.435506"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-16T17:13:33.592387" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-16T17:13:33.592176" elapsed="3.073338"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-16T17:13:36.665919" elapsed="0.039497"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-16T17:13:36.705648" elapsed="0.001596"/>
+</kw>
+<status status="PASS" start="2025-05-16T17:13:32.156150" elapsed="4.551246"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-16T17:13:36.708831" level="INFO">Typing text 'Admin' into text field 'css:input[name=username]'.</msg>
+<arg>css:input[name=username]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-16T17:13:36.708505" elapsed="0.445605"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-16T17:13:37.154655" level="INFO">Typing text 'admin123' into text field 'css:input[name=password]'.</msg>
+<arg>css:input[name=password]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-16T17:13:37.154356" elapsed="0.103248"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-16T17:13:37.258390" level="INFO">Clicking button 'css:.orangehrm-login-button'.</msg>
+<arg>css:.orangehrm-login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-16T17:13:37.258001" elapsed="0.098578"/>
+</kw>
+<arg>${valid_username}</arg>
+<arg>${valid_password}</arg>
+<status status="PASS" start="2025-05-16T17:13:36.707855" elapsed="0.648871"/>
+</kw>
+<kw name="verify the dashboard page opens">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-16T17:13:37.357913" level="INFO">Verifying element 'css:.oxd-topbar-header-breadcrumb-module' contains exact text 'Dashboard'.</msg>
+<arg>${Dashboard_text}</arg>
+<arg>Dashboard</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-16T17:13:37.357636" elapsed="1.595162"/>
+</kw>
+<status status="PASS" start="2025-05-16T17:13:37.357259" elapsed="1.595680"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-16T17:13:38.953217" elapsed="2.192754"/>
+</kw>
+<tag>UIT</tag>
+<status status="PASS" start="2025-05-16T17:13:32.155519" elapsed="8.990816"/>
+</test>
+<doc>This is a test suite</doc>
+<status status="PASS" start="2025-05-16T17:13:22.331134" elapsed="18.816001"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">smoke regression</stat>
+<stat pass="1" fail="0" skip="0">UIT</stat>
+</tag>
+<suite>
+<stat name="test Loginwithresource" id="s1" pass="2" fail="0" skip="0">test Loginwithresource</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
