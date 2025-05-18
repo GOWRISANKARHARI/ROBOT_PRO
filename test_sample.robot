@@ -234,42 +234,43 @@
 
 # 6. ALERT PROBLEM
 
-*** Settings ***
-Documentation     To validate the MultipleWindows
-Library           SeleniumLibrary
-Test Teardown     Close Browser
+# *** Settings ***
+# Documentation     To validate the MultipleWindows
+# Library           SeleniumLibrary
+# Test Teardown     Close Browser
 
-*** Test Cases ***
-Select Options in Dropdown
-    Open The Browser With URL
-    Select The Alert With OK
-    Select The Alert With Cancel
-    Select the Alert With SendKeys
+# *** Test Cases ***
+# Select Options in Dropdown
+#     Open The Browser With URL
+#     Select The Alert With OK
+#     Select The Alert With Cancel
+#     Select the Alert With SendKeys
 
-*** Keywords ***
-Open The Browser With URL
-    Open Browser    https://demo.automationtesting.in/Alerts.html    chrome
-    Maximize Browser Window
-    Set Browser Implicit Wait    10
-    Sleep    5s
+# *** Keywords ***
+# Open The Browser With URL
+#     Open Browser    https://demo.automationtesting.in/Alerts.html    chrome
+#     Maximize Browser Window
+#     Set Browser Implicit Wait    10
+#     Sleep    5s
 
-Select The Alert With OK
-    Click Element    xpath://a[@href="#OKTab"]
-    Click Button    xpath://*[@id="OKTab"]/button
-    Sleep    5s
-    Handle Alert    action=ACCEPT
-    Sleep    5s
+# Select The Alert With OK
+#     Click Element    xpath://a[@href="#OKTab"]
+#     Click Button    xpath://*[@id="OKTab"]/button
+#     Sleep    5s
+#     Handle Alert    action=ACCEPT
+#     Sleep    5s
 
-Select The Alert With Cancel
-    Click Element    xpath://a[@href="#CancelTab"]
-    Click Button    xpath://div[@id="CancelTab"]/button
-    Sleep    5s
-    Handle Alert    action=DISMISS
-    Sleep    5s
+# Select The Alert With Cancel
+#     Click Element    xpath://a[@href="#CancelTab"]
+#     Click Button    xpath://div[@id="CancelTab"]/button
+#     Sleep    5s
+#     Handle Alert    action=DISMISS
+#     Sleep    5s
 
-Select the Alert With SendKeys
-    Click Element    xpath://a[@href="#Textbox"]
-    Click Button    Xpath://*[@id="Textbox"]/button
-    Sleep    5s
-    Input Text Into Alert    this is my name    action=DISMISS
-    Sleep    5s
+# Select the Alert With SendKeys
+#     Click Element    xpath://a[@href="#Textbox"]
+#     Click Button    Xpath://*[@id="Textbox"]/button
+#     Sleep    5s
+#     Input Text Into Alert    this is my name    action=DISMISS
+#     Sleep    5s
+
